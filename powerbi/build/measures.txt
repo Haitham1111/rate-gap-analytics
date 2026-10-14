@@ -1,0 +1,59 @@
+### Members|#,0|1 Volume|Members in contracts that have a published MLR, December enrollment. Sums county rows, so several years selected add up member-years.
+SUM ( FactCounty[enrollment] )
+### Contracts Published|#,0|1 Volume|Distinct contracts with a published Adjusted MLR in the selected year(s).
+DISTINCTCOUNT ( FactMLR[contract_id] )
+### Payment Growth %|0.00"%"|2 Payment|Enrollment-weighted year-over-year growth in the county monthly rate (0% bonus column). Value is already in percent. Counties with no prior-year rate are left out of numerator and denominator.
+VAR _num = SUMX ( FactCounty, IF ( NOT ISBLANK ( FactCounty[payment_growth_pct] ), FactCounty[enrollment] * FactCounty[payment_growth_pct] ) )
+VAR _den = SUMX ( FactCounty, IF ( NOT ISBLANK ( FactCounty[payment_growth_pct] ), FactCounty[enrollment] ) )
+RETURN DIVIDE ( _num, _den )
+### Payment Index (2018=100)|0.0|2 Payment|Compounded weighted payment growth, first year in DimYear = 100. BLANK if any year in the chain has no growth value, so a gap is never treated as 0%.
+VAR _base = CALCULATE ( MIN ( DimYear[yr] ), ALL ( DimYear ) )
+VAR _y = MAX ( DimYear[yr] )
+VAR _yrs = FILTER ( ALL ( DimYear[yr] ), DimYear[yr] > _base && DimYear[yr] <= _y )
+VAR _missing = COUNTROWS ( FILTER ( _yrs, ISBLANK ( [Payment Growth %] ) ) )
+RETURN
+    IF ( _y = _base, 100,
+        IF ( _missing = 0, PRODUCTX ( _yrs, 1 + [Payment Growth %] / 100 ) * 100 ) )
+### Weighted MLR|0.0%|3 MLR|Enrollment-weighted Adjusted MLR, as CMS published it by contract. Not a profit measure.
+DIVIDE ( SUMX ( FactCounty, FactCounty[enrollment] * FactCounty[mlr_weighted] ), SUM ( FactCounty[enrollment] ) )
+### Non-Medical Share|0.00%|3 MLR|1 minus MLR, enrollment-weighted. Can be negative for a contract whose MLR is above 100%.
+DIVIDE ( SUMX ( FactCounty, FactCounty[enrollment] * FactCounty[nonmed_share] ), SUM ( FactCounty[enrollment] ) )
+### Non-Medical Change (pp)|+0.00;-0.00;0.00|3 MLR|Change in Non-Medical Share versus the prior year, in percentage points, for the latest year in context. BLANK when either year is missing (never the share itself).
+VAR _y = MAX ( DimYear[yr] )
+VAR _now = CALCULATE ( [Non-Medical Share], DimYear[yr] = _y )
+VAR _prev = CALCULATE ( [Non-Medical Share], DimYear[yr] = _y - 1 )
+RETURN IF ( ISBLANK ( _now ) || ISBLANK ( _prev ), BLANK (), ( _now - _prev ) * 100 )
+### County In Scope|0|4 County|1 when the county has 5,000+ members in both 2018 and 2023, otherwise BLANK. Blank member counts count as out of scope.
+VAR _m23 = CALCULATE ( [Members], DimYear[yr] = 2023 )
+VAR _m18 = CALCULATE ( [Members], DimYear[yr] = 2018 )
+RETURN IF ( NOT ISBLANK ( _m23 ) && NOT ISBLANK ( _m18 ) && _m23 >= 5000 && _m18 >= 5000, 1 )
+### Counties In Scope|#,0|4 County|Number of counties with 5,000+ members in both 2018 and 2023.
+SUMX ( VALUES ( DimCounty[ssa_code] ), [County In Scope] )
+### County Payment Growth 2018-23 %|0.0"%"|4 County|Cumulative rise in the county rate from 2018 to 2023, in percent. BLANK outside the 5,000-member scope.
+VAR _r23 = CALCULATE ( SUM ( FactCounty[rate_0] ), DimYear[yr] = 2023 )
+VAR _r18 = CALCULATE ( SUM ( FactCounty[rate_0] ), DimYear[yr] = 2018 )
+RETURN IF ( [County In Scope] = 1 && NOT ISBLANK ( _r23 ) && NOT ISBLANK ( _r18 ) && _r18 > 0, ( DIVIDE ( _r23, _r18 ) - 1 ) * 100 )
+### County Non-Med Change 2018-23 (pp)|+0.00;-0.00;0.00|4 County|Change in the county Non-Medical Share from 2018 to 2023, in percentage points. BLANK outside the 5,000-member scope.
+VAR _n23 = CALCULATE ( [Non-Medical Share], DimYear[yr] = 2023 )
+VAR _n18 = CALCULATE ( [Non-Medical Share], DimYear[yr] = 2018 )
+RETURN IF ( [County In Scope] = 1 && NOT ISBLANK ( _n23 ) && NOT ISBLANK ( _n18 ), ( _n23 - _n18 ) * 100 )
+### Non-Med Share 2023 (5k+ Counties)|0.00%|4 County|2023 Non-Medical Share for counties in scope. Used to rank the widest and narrowest counties. BLANK outside scope so small counties never rank.
+IF ( [County In Scope] = 1, CALCULATE ( [Non-Medical Share], DimYear[yr] = 2023 ) )
+### AZ Non-Medical Share|0.00%|5 Arizona|Non-Medical Share for Arizona (SSA state code 03).
+CALCULATE ( [Non-Medical Share], FactCounty[state_ssa] = "03" )
+### National Non-Medical Share|0.00%|5 Arizona|Non-Medical Share for all counties, ignoring any county or state filter.
+CALCULATE ( [Non-Medical Share], REMOVEFILTERS ( DimCounty ), REMOVEFILTERS ( FactCounty[state_ssa] ) )
+### AZ Minus National (pp)|+0.00;-0.00;0.00|5 Arizona|Arizona Non-Medical Share minus national, in percentage points. Same unit on both sides.
+VAR _az = [AZ Non-Medical Share]
+VAR _nat = [National Non-Medical Share]
+RETURN IF ( ISBLANK ( _az ) || ISBLANK ( _nat ), BLANK (), ( _az - _nat ) * 100 )
+### AZ Payment Growth %|0.00"%"|5 Arizona|Enrollment-weighted payment growth for Arizona counties.
+CALCULATE ( [Payment Growth %], FactCounty[state_ssa] = "03" )
+### Contracts MLR Over 100%|#,0|6 Contracts|Contract-years whose Adjusted MLR is above 100%. A blank MLR is never counted.
+COUNTROWS ( FILTER ( FactMLR, NOT ISBLANK ( FactMLR[adjusted_mlr] ) && FactMLR[adjusted_mlr] > 1 ) )
+### Contracts Under 85% MLR|#,0|6 Contracts|Contract-years whose Adjusted MLR is below 85%, the level that triggers a remittance. A blank MLR is never counted (BLANK is less than 0.85 in DAX).
+COUNTROWS ( FILTER ( FactMLR, NOT ISBLANK ( FactMLR[adjusted_mlr] ) && FactMLR[adjusted_mlr] < 0.85 ) )
+### Avg Contract Payment Growth %|0.00"%"|6 Contracts|Simple average over contracts of each contract's enrollment-weighted county payment growth. Contracts need 1,000+ members, a prior-year MLR and a growth value.
+AVERAGE ( FactContract[payment_growth_pct] )
+### Avg Contract Non-Med Change (pp)|+0.00;-0.00;0.00|6 Contracts|Simple average over contracts of the year-over-year change in non-medical share, in percentage points.
+AVERAGE ( FactContract[nonmed_change_pp] )

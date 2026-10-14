@@ -1,0 +1,7 @@
+﻿Changed database context to 'Rate_Gap'.
+quartile contracts min_nonmed_pct max_nonmed_pct avg_payment_growth_pct avg_nonmed_change_pp members
+-------- --------- -------------- -------------- ---------------------- -------------------- -------
+1 126 -19.90 4.70 5.14 -1.89 2492019
+2 125 4.70 8.80 5.27 -.33 8866344
+3 125 8.90 12.00 5.36 -.40 13034033
+4 125 12.00 24.80 5.62 .42 6488568

@@ -1,0 +1,48 @@
+﻿
+PASS  county_rate 2018 rows                    source=3246  staged=3246
+PASS  county_rate 2018 sum of 0% rate          source=2730878.95  staged=2730878.95
+PASS  county_rate 2019 rows                    source=3246  staged=3246
+PASS  county_rate 2019 sum of 0% rate          source=2894879.97  staged=2894879.97
+PASS  county_rate 2020 rows                    source=3245  staged=3245
+PASS  county_rate 2020 sum of 0% rate          source=3064233.39  staged=3064233.39
+PASS  county_rate 2021 rows                    source=3245  staged=3245
+PASS  county_rate 2021 sum of 0% rate          source=3186174.06  staged=3186174.06
+PASS  county_rate 2022 rows                    source=3245  staged=3245
+PASS  county_rate 2022 sum of 0% rate          source=3364253.85  staged=3364253.85
+PASS  county_rate 2023 rows                    source=3245  staged=3245
+PASS  county_rate 2023 sum of 0% rate          source=3537366.57  staged=3537366.57
+PASS  mlr 2018 rows                            source=423  staged=423
+PASS  mlr 2018 sum of adjusted MLR             source=393.5673  staged=393.5673
+PASS  mlr 2019 rows                            source=453  staged=453
+PASS  mlr 2019 sum of adjusted MLR             source=418.4398  staged=418.4398
+PASS  mlr 2020 rows                            source=508  staged=508
+PASS  mlr 2020 sum of adjusted MLR             source=458.1059  staged=458.1059
+PASS  mlr 2021 rows                            source=564  staged=564
+PASS  mlr 2021 sum of adjusted MLR             source=530.5376  staged=530.5376
+PASS  mlr 2022 rows                            source=615  staged=615
+PASS  mlr 2022 sum of adjusted MLR             source=573.4481  staged=573.4481
+PASS  mlr 2023 rows                            source=635  staged=635
+PASS  mlr 2023 sum of adjusted MLR             source=597.561  staged=597.561
+PASS  enrollment 2018 raw rows                 source=2315883  staged=2315883
+PASS  enrollment 2018 suppressed rows          source=2184124  staged=2184124
+PASS  enrollment 2018 enrollment sum           source=46657284  staged=46657284
+PASS  enrollment 2019 raw rows                 source=2723515  staged=2723515
+PASS  enrollment 2019 suppressed rows          source=2581982  staged=2581982
+PASS  enrollment 2019 enrollment sum           source=48272481  staged=48272481
+PASS  enrollment 2020 raw rows                 source=3213958  staged=3213958
+PASS  enrollment 2020 suppressed rows          source=3058330  staged=3058330
+PASS  enrollment 2020 enrollment sum           source=49958113  staged=49958113
+PASS  enrollment 2021 raw rows                 source=3365563  staged=3365563
+PASS  enrollment 2021 suppressed rows          source=3194526  staged=3194526
+PASS  enrollment 2021 enrollment sum           source=51449071  staged=51449071
+PASS  enrollment 2022 raw rows                 source=3557395  staged=3557395
+PASS  enrollment 2022 suppressed rows          source=3389362  staged=3389362
+PASS  enrollment 2022 enrollment sum           source=52997762  staged=52997762
+PASS  enrollment 2023 raw rows                 source=3707920  staged=3707920
+PASS  enrollment 2023 suppressed rows          source=3527852  staged=3527852
+PASS  enrollment 2023 enrollment sum           source=54352036  staged=54352036
+
+42 PASS / 0 FAIL of 42 checks
+OVERALL: PASS
+
+

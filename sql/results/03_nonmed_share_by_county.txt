@@ -1,0 +1,20 @@
+﻿Changed database context to 'Rate_Gap'.
+counties p10_pct median_pct p90_pct min_pct max_pct
+-------- ------- ---------- ------- ------- -------
+2332 6.49 9.89 11.31 -6.31 13.47
+county_name enrollment contracts nonmed_share_pct_2023 payment_growth_pct_2023 nonmed_change_pp_2023
+----------- ---------- --------- --------------------- ----------------------- ---------------------
+GRAHAM 3266 14 11.73 7.19 -2.13
+PIMA 139266 44 11.13 7.06 -.73
+YAVAPAI 34933 27 10.85 5.87 -1.29
+GILA 6456 18 10.84 3.27 -1.75
+SANTA CRUZ 6866 18 10.58 6.61 -2.33
+MARICOPA 383471 56 10.34 5.33 .10
+PINAL 47237 34 10.20 10.26 -.83
+COCHISE 16104 16 10.19 4.51 -1.18
+COCONINO 6681 18 10.08 4.56 -2.12
+LA PAZ 2443 13 9.94 5.01 -2.10
+MOHAVE 32162 20 9.87 5.31 -1.81
+NAVAJO 7753 12 9.78 6.98 -2.32
+APACHE 3535 8 9.31 4.42 -2.50
+YUMA 19313 15 8.17 3.83 -3.74

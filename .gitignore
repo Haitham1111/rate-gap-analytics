@@ -1,0 +1,18 @@
+# Raw CMS downloads (large; re-created by python/01_pull_cms.py)
+raw/
+*.zip
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Power BI
+*.pbix.bak
+.pbi/
+
+# Editor / OS / temp
+~*
+*.tmp
+.DS_Store
+Thumbs.db
