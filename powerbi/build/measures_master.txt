@@ -1,0 +1,18 @@
+### State MA Members|#,0|7 Master|Medicare Advantage members in the state, September 2026 (newest month CMS had published). Sums over the states in context.
+SUM ( FactScorecard[ma_members] )
+### States Counted|#,0|7 Master|Number of states (50 states + DC) in context.
+DISTINCTCOUNT ( FactScorecard[state_name] )
+### State Announced 2027 Change %|0.00"%"|7 Master|Change in the county rate from the 2026 to the 2027 ratebook, weighted by members. Value is already in percent. This is the county rate file, not CMS's expected average payment change.
+DIVIDE ( SUMX ( FactScorecard, FactScorecard[ma_members] * FactScorecard[chg_2027_pct] ), SUMX ( FactScorecard, IF ( NOT ISBLANK ( FactScorecard[chg_2027_pct] ), FactScorecard[ma_members] ) ) )
+### State 3-Year Payment Growth %|0.00"%"|7 Master|County rate 2026 vs 2023, weighted by members, in percent.
+DIVIDE ( SUMX ( FactScorecard, FactScorecard[ma_members] * FactScorecard[pay_3yr_pct] ), SUMX ( FactScorecard, IF ( NOT ISBLANK ( FactScorecard[pay_3yr_pct] ), FactScorecard[ma_members] ) ) )
+### State 2026 Payment Growth %|0.00"%"|7 Master|County rate 2026 vs 2025, weighted by members, in percent.
+DIVIDE ( SUMX ( FactScorecard, FactScorecard[ma_members] * FactScorecard[pay_growth_2026_pct] ), SUMX ( FactScorecard, IF ( NOT ISBLANK ( FactScorecard[pay_growth_2026_pct] ), FactScorecard[ma_members] ) ) )
+### State Non-Medical Share CY2023|0.00"%"|7 Master|1 minus MLR for contract year 2023 (newest MLR file), weighted by members, in percent.
+DIVIDE ( SUMX ( FactScorecard, FactScorecard[ma_members] * FactScorecard[nonmed_share_cy2023_pct] ), SUMX ( FactScorecard, IF ( NOT ISBLANK ( FactScorecard[nonmed_share_cy2023_pct] ), FactScorecard[ma_members] ) ) )
+### State Top 10 Count|0|7 Master|How many of three market columns (enrollment, 3-year payment growth, 2027 announced change) put the state in the top 10. BLANK unless exactly one state is in context, so a total never shows a made-up count.
+IF ( HASONEVALUE ( FactScorecard[state_name] ), MAX ( FactScorecard[top10_count] ) )
+### Top 10 States Share of MA Members|0.0"%"|7 Master|Share of all MA members in the 10 largest states, in percent. Ignores any state filter.
+DIVIDE ( SUMX ( FILTER ( ALL ( FactScorecard ), FactScorecard[rank_enrollment] <= 10 ), FactScorecard[ma_members] ), SUMX ( ALL ( FactScorecard ), FactScorecard[ma_members] ) ) * 100
+### Outlook Value %|0.00"%"|7 Master|Payment growth in percent for the series on the outlook chart (Actual 2024-2026, Announced 2027, Trend projection 2027), weighted by members. Trend projection is a projection, not published data.
+DIVIDE ( SUMX ( FactOutlookLong, FactOutlookLong[value_pct] * FactOutlookLong[weight] ), SUMX ( FactOutlookLong, IF ( NOT ISBLANK ( FactOutlookLong[value_pct] ), FactOutlookLong[weight] ) ) )

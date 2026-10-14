@@ -16,6 +16,37 @@ Scope: Medicare Advantage contracts only. Non-medical share = 1 - MLR, weighted 
 
 **This is not a surprise result.** The data shows no pass-through signal in either direction. It is not evidence of wrongdoing: a county value reflects which contracts serve it, and MLR is a regulatory ratio, not a profit measure. See [`reports/methodology-and-limits.md`](reports/methodology-and-limits.md).
 
+## Master extension: newest data, by state (added 2026-10-13)
+
+Built on top of the project above; nothing in v1 was changed or replaced. It adds the newest CMS releases (county rates through the 2027 ratebook, enrollment through September 2026) and a 50-state + DC view for agents and upline deciding where to focus. Non-medical share stays at contract year 2023 because CMS had not published a newer MLR file.
+
+![Master summary, 11x17 landscape](screenshots/04_master_summary_11x17.png)
+
+Print-ready: [`powerbi/rate-gap-master-summary-11x17.pdf`](powerbi/rate-gap-master-summary-11x17.pdf). Report file: [`powerbi/rate-gap-master-40-state.pbix`](powerbi/rate-gap-master-40-state.pbix) (summary page, state scorecard with a state slicer, 2027 outlook).
+
+**Five findings** (each has a SQL query and a "what this does NOT show" line in [`reports/master-findings.md`](reports/master-findings.md)):
+
+1. **The announced 2027 county benchmark change runs from 3.21% (Indiana) to 9.36% (Alaska); 5.26% nationally, 26 of the 51 areas above it.** This is the county rate file. CMS's expected average payment change is +2.48%, +4.98% with risk score trend (April 6, 2026).
+2. **County rates rose 8.69% in 2026, 3.66 times the 2024-25 average** (2.32% in 2024, 2.43% in 2025). The 2027 trend projection is 4.48%, against 5.26% announced.
+3. **No state clearly leads.** None of the 51 areas is in the top 10 on all three of MA members, 3-year payment growth and 2027 announced change. California, Florida, New York and Utah reach two. The 10 largest states hold 56.7% of 34,871,342 MA members (September 2026).
+4. **Three parent organizations hold 58.7% of MA members:** UnitedHealth 26.5%, Humana 20.4%, CVS 11.8%. In 42 of 51 areas the largest parent holds 30% or more.
+5. **State non-medical share and payment growth are unrelated (r = 0.032 across 51 areas),** matching v1 at county level. The 2023 share runs from 2.24% (North Dakota) to 12.17% (Tennessee).
+
+**Not decided here:** which states are "good". Rankings are by each column alone and nothing is combined. The licensed-state list was not supplied, so all 50 states + DC are built and `dbo.dim_state_licence.licensed` is empty for you to fill in. Projections are labeled and are not forecasts or evidence of wrongdoing.
+
+| New file | What it is |
+|---|---|
+| [`python/03_pull_cms_latest.py`](python/03_pull_cms_latest.py), [`04_validate_latest.py`](python/04_validate_latest.py) | Pull the newest CMS files; recount them (17 PASS / 0 FAIL) |
+| [`sql/00b_setup_latest_data.sql`](sql/00b_setup_latest_data.sql) | New tables and views, loaded beside v1 |
+| [`sql/09_state_scorecard.sql`](sql/09_state_scorecard.sql) | One row per state, newest year, with a rank for each column |
+| [`sql/10_state_outlook_2027.sql`](sql/10_state_outlook_2027.sql) | 2027 announced change, trailing trend and labeled projection |
+| [`sql/11_plan_mix_by_state.sql`](sql/11_plan_mix_by_state.sql) | Top 5 parent organizations per state |
+| [`sql/12_five_findings.sql`](sql/12_five_findings.sql) | The queries behind the five findings |
+| [`reports/master-findings.md`](reports/master-findings.md) | Findings, source register, ranking method |
+| [`reports/dax-measures-master.md`](reports/dax-measures-master.md) | Nine new measures and their BLANK tests |
+
+To reproduce: run `python python/03_pull_cms_latest.py` and `04_validate_latest.py`, then `sqlcmd -S .\SQLEXPRESS -C -i sql\00b_setup_latest_data.sql`, then `sql\09` to `sql\12`. Source register and projection method: [`reports/methodology-and-limits.md`](reports/methodology-and-limits.md).
+
 ## Tech stack
 
 SQL Server Express (T-SQL: views, window functions, NTILE, PERCENTILE_CONT), Python 3 with pandas, Power BI Desktop (DAX, PBIR format, dark theme).

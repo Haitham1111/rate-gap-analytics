@@ -1,0 +1,26 @@
+﻿Changed database context to 'Rate_Gap'.
+national_2027_change_pct highest_state highest_pct lowest_state lowest_pct spread_pct_points states_above_national
+------------------------ ------------- ----------- ------------ ---------- ----------------- ---------------------
+5.26 ALASKA 9.36 INDIANA 3.21 6.15 26
+growth_2024_pct growth_2025_pct growth_2026_pct times_the_2024_25_average
+--------------- --------------- --------------- -------------------------
+2.32 2.43 8.69 3.66
+top10_count states state_list
+----------- ------ ----------
+2 4 CALIFORNIA, FLORIDA, NEW YORK, UTAH
+1 22 ALASKA, ARIZONA, COLORADO, GEORGIA, IDAHO, ILLINOIS, INDIANA, IOWA, LOUISIANA, MAINE, MICHIGAN, MONTANA, NEBRASKA, NEVADA, NEW MEXICO, NORTH CAROLINA, OHIO, OKLAHOMA, PENNSYLVANIA, TEXAS, WASHINGTON, WYOMING
+0 25 ALABAMA, ARKANSAS, CONNECTICUT, DELAWARE, DISTRICT OF COLUMBIA, HAWAII, KANSAS, KENTUCKY, MARYLAND, MASSACHUSETTS, MINNESOTA, MISSISSIPPI, MISSOURI, NEW HAMPSHIRE, NEW JERSEY, NORTH DAKOTA, OREGON, RHODE ISLAND, SOUTH CAROLINA, SOUTH DAKOTA, TENNESSEE, VERMONT, VIRGINIA, WEST VIRGINIA, WISCONSIN
+states_counted ma_members_total top10_states_share_pct
+-------------- ---------------- ----------------------
+51 34871342 56.7
+parent_org members share_of_national_pct top3_combined_share_pct
+---------- ------- --------------------- -----------------------
+UnitedHealth Group, Inc. 9240027 26.5 58.7
+Humana Inc. 7107782 20.4 58.7
+CVS Health Corporation 4111217 11.8 58.7
+areas largest_parent_30pct_or_more largest_parent_40pct_or_more largest_parent_50pct_or_more
+----- ---------------------------- ---------------------------- ----------------------------
+51 42 24 5
+states correlation_r highest_state highest_pct lowest_state lowest_pct
+------ ------------- ------------- ----------- ------------ ----------
+51 .032 TENNESSEE 12.17 NORTH DAKOTA 2.24

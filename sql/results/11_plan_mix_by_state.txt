@@ -1,0 +1,311 @@
+﻿Changed database context to 'Rate_Gap'.
+state_name org_rank parent_org members share_of_state_pct
+---------- -------- ---------- ------- ------------------
+ALABAMA 1 Humana Inc. 230973 33.2
+ALABAMA 2 UnitedHealth Group, Inc. 160635 23.1
+ALABAMA 3 BlueCross BlueShield of Alabama 113931 16.4
+ALABAMA 4 Health Care Service Corporation 51911 7.5
+ALABAMA 5 Triton Health Systems, L.L.C. 51445 7.4
+ALASKA 1 CVS Health Corporation 1019 51.0
+ALASKA 2 UnitedHealth Group, Inc. 468 23.4
+ALASKA 3 Humana Inc. 464 23.2
+ALASKA 4 Elevance Health, Inc. 35 1.8
+ALASKA 5 Blue Cross Blue Shield of Michigan Mutual Ins. Co. 14 .7
+ARIZONA 1 UnitedHealth Group, Inc. 325922 40.6
+ARIZONA 2 Humana Inc. 176356 22.0
+ARIZONA 3 Health Care Service Corporation 76900 9.6
+ARIZONA 4 Blue Cross Blue Shield of Arizona 47344 5.9
+ARIZONA 5 Centene Corporation 46664 5.8
+ARKANSAS 1 UnitedHealth Group, Inc. 129455 40.7
+ARKANSAS 2 Humana Inc. 110320 34.7
+ARKANSAS 3 CVS Health Corporation 25560 8.0
+ARKANSAS 4 Centene Corporation 22976 7.2
+ARKANSAS 5 USAble Mutual Insurance Company 14745 4.6
+CALIFORNIA 1 Kaiser Foundation Health Plan, Inc. 1525598 41.1
+CALIFORNIA 2 SCAN Group 432687 11.7
+CALIFORNIA 3 UnitedHealth Group, Inc. 379612 10.2
+CALIFORNIA 4 Elevance Health, Inc. 282622 7.6
+CALIFORNIA 5 Alignment Healthcare USA, LLC 236314 6.4
+COLORADO 1 UnitedHealth Group, Inc. 249488 44.7
+COLORADO 2 Humana Inc. 115628 20.7
+COLORADO 3 Kaiser Foundation Health Plan, Inc. 114823 20.6
+COLORADO 4 CVS Health Corporation 35361 6.3
+COLORADO 5 Devoted Health, Inc. 20650 3.7
+CONNECTICUT 1 CVS Health Corporation 192249 43.2
+CONNECTICUT 2 UnitedHealth Group, Inc. 112046 25.2
+CONNECTICUT 3 Molina Healthcare, Inc. 47693 10.7
+CONNECTICUT 4 Elevance Health, Inc. 47689 10.7
+CONNECTICUT 5 Point32Health, Inc. 22964 5.2
+DELAWARE 1 UnitedHealth Group, Inc. 34386 41.1
+DELAWARE 2 CVS Health Corporation 23808 28.4
+DELAWARE 3 Highmark Health 8609 10.3
+DELAWARE 4 Humana Inc. 7628 9.1
+DELAWARE 5 Centene Corporation 3887 4.6
+DISTRICT OF COLUMBIA 1 UnitedHealth Group, Inc. 20957 62.3
+DISTRICT OF COLUMBIA 2 Kaiser Foundation Health Plan, Inc. 6534 19.4
+DISTRICT OF COLUMBIA 3 CVS Health Corporation 2642 7.9
+DISTRICT OF COLUMBIA 4 Humana Inc. 1593 4.7
+DISTRICT OF COLUMBIA 5 Health Care Service Corporation 1392 4.1
+FLORIDA 1 Humana Inc. 1161469 38.1
+FLORIDA 2 UnitedHealth Group, Inc. 878498 28.8
+FLORIDA 3 Elevance Health, Inc. 286285 9.4
+FLORIDA 4 CVS Health Corporation 264662 8.7
+FLORIDA 5 Guidewell Mutual Holding Corporation 133373 4.4
+GEORGIA 1 Humana Inc. 329605 29.4
+GEORGIA 2 UnitedHealth Group, Inc. 316053 28.2
+GEORGIA 3 CVS Health Corporation 198427 17.7
+GEORGIA 4 Elevance Health, Inc. 95465 8.5
+GEORGIA 5 Devoted Health, Inc. 44187 3.9
+HAWAII 1 UnitedHealth Group, Inc. 50370 29.9
+HAWAII 2 Hawaii Medical Service Association 42588 25.3
+HAWAII 3 Kaiser Foundation Health Plan, Inc. 37278 22.1
+HAWAII 4 Humana Inc. 17410 10.3
+HAWAII 5 Devoted Health, Inc. 14434 8.6
+IDAHO 1 UnitedHealth Group, Inc. 79576 42.3
+IDAHO 2 Gemstone Holdings, Inc. 36019 19.1
+IDAHO 3 Trinity Health Corporation 22891 12.2
+IDAHO 4 PacificSource 17066 9.1
+IDAHO 5 Humana Inc. 15212 8.1
+ILLINOIS 1 CVS Health Corporation 343794 31.9
+ILLINOIS 2 Humana Inc. 333565 30.9
+ILLINOIS 3 UnitedHealth Group, Inc. 217370 20.2
+ILLINOIS 4 Health Care Service Corporation 67674 6.3
+ILLINOIS 5 Centene Corporation 47953 4.4
+INDIANA 1 UnitedHealth Group, Inc. 252864 35.3
+INDIANA 2 Humana Inc. 217852 30.4
+INDIANA 3 Elevance Health, Inc. 136829 19.1
+INDIANA 4 CVS Health Corporation 36998 5.2
+INDIANA 5 Devoted Health, Inc. 19745 2.8
+IOWA 1 CVS Health Corporation 79731 32.6
+IOWA 2 UnitedHealth Group, Inc. 69688 28.5
+IOWA 3 Humana Inc. 35137 14.3
+IOWA 4 Blue Cross Blue Shield of Michigan Mutual Ins. Co. 33082 13.5
+IOWA 5 Centene Corporation 12400 5.1
+KANSAS 1 UnitedHealth Group, Inc. 77373 39.3
+KANSAS 2 Humana Inc. 51993 26.4
+KANSAS 3 CVS Health Corporation 44386 22.6
+KANSAS 4 Blue Cross Blue Shield of Kansas 9972 5.1
+KANSAS 5 Devoted Health, Inc. 4402 2.2
+KENTUCKY 1 Humana Inc. 289841 53.6
+KENTUCKY 2 Elevance Health, Inc. 83195 15.4
+KENTUCKY 3 UnitedHealth Group, Inc. 71760 13.3
+KENTUCKY 4 CVS Health Corporation 39420 7.3
+KENTUCKY 5 Centene Corporation 37746 7.0
+LOUISIANA 1 Humana Inc. 230806 41.7
+LOUISIANA 2 UnitedHealth Group, Inc. 205938 37.2
+LOUISIANA 3 Louisiana Health Service & Indemnity Company 56309 10.2
+LOUISIANA 4 CVS Health Corporation 44393 8.0
+LOUISIANA 5 Centene Corporation 9576 1.7
+MAINE 1 Martin's Point Health Care, Inc. 66121 28.9
+MAINE 2 UnitedHealth Group, Inc. 52262 22.8
+MAINE 3 CVS Health Corporation 37057 16.2
+MAINE 4 Elevance Health, Inc. 26352 11.5
+MAINE 5 Humana Inc. 25817 11.3
+MARYLAND 1 Kaiser Foundation Health Plan, Inc. 75533 25.7
+MARYLAND 2 CareFirst, Inc. 52312 17.8
+MARYLAND 3 Humana Inc. 49709 16.9
+MARYLAND 4 UnitedHealth Group, Inc. 42009 14.3
+MARYLAND 5 CVS Health Corporation 33539 11.4
+MASSACHUSETTS 1 Point32Health, Inc. 124456 23.3
+MASSACHUSETTS 2 UnitedHealth Group, Inc. 111492 20.9
+MASSACHUSETTS 3 Blue Cross and Blue Shield of Massachusetts, Inc. 86733 16.3
+MASSACHUSETTS 4 CVS Health Corporation 69010 12.9
+MASSACHUSETTS 5 CareSource 44655 8.4
+MICHIGAN 1 Blue Cross Blue Shield of Michigan Mutual Ins. Co. 536480 36.6
+MICHIGAN 2 Corewell Health 284712 19.4
+MICHIGAN 3 Humana Inc. 248049 16.9
+MICHIGAN 4 Henry Ford Health System 132027 9.0
+MICHIGAN 5 CVS Health Corporation 102678 7.0
+MINNESOTA 1 Aware Integrated, Inc. 294542 49.2
+MINNESOTA 2 Medica Holding Company 91513 15.3
+MINNESOTA 3 UnitedHealth Group, Inc. 75975 12.7
+MINNESOTA 4 Allina Health and Aetna Insurance Holding Company 56605 9.5
+MINNESOTA 5 HealthPartners, Inc. 54838 9.2
+MISSISSIPPI 1 Humana Inc. 126240 43.5
+MISSISSIPPI 2 UnitedHealth Group, Inc. 74484 25.7
+MISSISSIPPI 3 CVS Health Corporation 36371 12.5
+MISSISSIPPI 4 Centene Corporation 22758 7.8
+MISSISSIPPI 5 Health Care Service Corporation 14283 4.9
+MISSOURI 1 UnitedHealth Group, Inc. 331531 44.9
+MISSOURI 2 Humana Inc. 164391 22.3
+MISSOURI 3 CVS Health Corporation 118979 16.1
+MISSOURI 4 Lumeris Group Holdings Corporation 45268 6.1
+MISSOURI 5 Elevance Health, Inc. 26464 3.6
+MONTANA 1 Humana Inc. 54688 70.3
+MONTANA 2 Health Care Service Corporation 13300 17.1
+MONTANA 3 UnitedHealth Group, Inc. 7092 9.1
+MONTANA 4 CVS Health Corporation 1253 1.6
+MONTANA 5 PacificSource 1103 1.4
+NEBRASKA 1 UnitedHealth Group, Inc. 52054 41.3
+NEBRASKA 2 Blue Cross Blue Shield of Nebraska 27956 22.2
+NEBRASKA 3 CVS Health Corporation 15149 12.0
+NEBRASKA 4 Humana Inc. 13915 11.0
+NEBRASKA 5 Medica Holding Company 8213 6.5
+NEVADA 1 UnitedHealth Group, Inc. 99333 30.4
+NEVADA 2 Humana Inc. 97791 29.9
+NEVADA 3 CVS Health Corporation 33300 10.2
+NEVADA 4 Alignment Healthcare USA, LLC 24670 7.5
+NEVADA 5 Universal Health Services, Inc. 23257 7.1
+NEW HAMPSHIRE 1 Humana Inc. 42611 38.6
+NEW HAMPSHIRE 2 UnitedHealth Group, Inc. 33879 30.7
+NEW HAMPSHIRE 3 Elevance Health, Inc. 15703 14.2
+NEW HAMPSHIRE 4 CVS Health Corporation 12503 11.3
+NEW HAMPSHIRE 5 BMC Health System, Inc. 5107 4.6
+NEW JERSEY 1 CVS Health Corporation 232735 30.6
+NEW JERSEY 2 UnitedHealth Group, Inc. 217123 28.5
+NEW JERSEY 3 Clover Health Holdings, Inc. 131680 17.3
+NEW JERSEY 4 Horizon Mutual Holdings, Inc 75553 9.9
+NEW JERSEY 5 Humana Inc. 54167 7.1
+NEW MEXICO 1 UnitedHealth Group, Inc. 80726 33.8
+NEW MEXICO 2 Humana Inc. 54501 22.8
+NEW MEXICO 3 Presbyterian Healthcare Services 52605 22.0
+NEW MEXICO 4 Health Care Service Corporation 42934 18.0
+NEW MEXICO 5 Devoted Health, Inc. 2097 .9
+NEW YORK 1 CVS Health Corporation 402624 18.6
+NEW YORK 2 UnitedHealth Group, Inc. 391746 18.1
+NEW YORK 3 Healthfirst, Inc. 371813 17.2
+NEW YORK 4 Lifetime Healthcare, Inc. 331702 15.3
+NEW YORK 5 Centene Corporation 162133 7.5
+NORTH CAROLINA 1 Humana Inc. 446037 33.5
+NORTH CAROLINA 2 UnitedHealth Group, Inc. 423744 31.8
+NORTH CAROLINA 3 CuraCor Solutions Corp. 183592 13.8
+NORTH CAROLINA 4 CVS Health Corporation 144737 10.9
+NORTH CAROLINA 5 Devoted Health, Inc. 37115 2.8
+NORTH DAKOTA 1 Medica Holding Company 11296 36.3
+NORTH DAKOTA 2 Blue Cross Blue Shield of Michigan Mutual Ins. Co. 6334 20.4
+NORTH DAKOTA 3 UnitedHealth Group, Inc. 6000 19.3
+NORTH DAKOTA 4 Sanford Health 4510 14.5
+NORTH DAKOTA 5 CVS Health Corporation 2917 9.4
+OHIO 1 UnitedHealth Group, Inc. 341011 23.1
+OHIO 2 CVS Health Corporation 325209 22.0
+OHIO 3 Elevance Health, Inc. 228386 15.5
+OHIO 4 Humana Inc. 218622 14.8
+OHIO 5 MEDICAL MUTUAL OF OHIO 86864 5.9
+OKLAHOMA 1 UnitedHealth Group, Inc. 144063 41.7
+OKLAHOMA 2 Humana Inc. 116576 33.8
+OKLAHOMA 3 St Francis Health System & St John Health System 37628 10.9
+OKLAHOMA 4 MHH Healthcare, L.P. 19144 5.5
+OKLAHOMA 5 CVS Health Corporation 14445 4.2
+OREGON 1 UnitedHealth Group, Inc. 156116 30.1
+OREGON 2 Kaiser Foundation Health Plan, Inc. 79837 15.4
+OREGON 3 Providence St Joseph Health 55387 10.7
+OREGON 4 Cambia Health Solutions, Inc. 44099 8.5
+OREGON 5 PacificSource 36560 7.0
+PENNSYLVANIA 1 CVS Health Corporation 444648 27.2
+PENNSYLVANIA 2 Highmark Health 322239 19.7
+PENNSYLVANIA 3 UPMC Health System 225678 13.8
+PENNSYLVANIA 4 UnitedHealth Group, Inc. 148231 9.1
+PENNSYLVANIA 5 Independence Health Group, Inc. 134898 8.2
+RHODE ISLAND 1 Blue Cross & Blue Shield of Rhode Island 75862 50.5
+RHODE ISLAND 2 UnitedHealth Group, Inc. 44227 29.4
+RHODE ISLAND 3 CVS Health Corporation 18608 12.4
+RHODE ISLAND 4 NEIGHBORHOOD HEALTH PLAN OF RHODE ISLAND 10899 7.3
+RHODE ISLAND 5 Elevance Health, Inc. 458 .3
+SOUTH CAROLINA 1 Humana Inc. 223198 37.5
+SOUTH CAROLINA 2 UnitedHealth Group, Inc. 157661 26.5
+SOUTH CAROLINA 3 CVS Health Corporation 79359 13.3
+SOUTH CAROLINA 4 BlueCross BlueShield of South Carolina (BCBSSC) 49034 8.2
+SOUTH CAROLINA 5 Devoted Health, Inc. 30486 5.1
+SOUTH DAKOTA 1 Medica Holding Company 17807 38.8
+SOUTH DAKOTA 2 Blue Cross Blue Shield of Michigan Mutual Ins. Co. 10490 22.9
+SOUTH DAKOTA 3 UnitedHealth Group, Inc. 7255 15.8
+SOUTH DAKOTA 4 CVS Health Corporation 5368 11.7
+SOUTH DAKOTA 5 Sanford Health 4730 10.3
+TENNESSEE 1 UnitedHealth Group, Inc. 229065 28.4
+TENNESSEE 2 BlueCross BlueShield of Tennessee 213266 26.4
+TENNESSEE 3 Humana Inc. 205654 25.5
+TENNESSEE 4 Health Care Service Corporation 85383 10.6
+TENNESSEE 5 Elevance Health, Inc. 28364 3.5
+TEXAS 1 UnitedHealth Group, Inc. 1309529 47.9
+TEXAS 2 Humana Inc. 547239 20.0
+TEXAS 3 Health Care Service Corporation 305046 11.2
+TEXAS 4 CVS Health Corporation 199231 7.3
+TEXAS 5 Centene Corporation 106831 3.9
+UTAH 1 UnitedHealth Group, Inc. 126395 47.1
+UTAH 2 Humana Inc. 63382 23.6
+UTAH 3 Intermountain Health Care, Inc. 52294 19.5
+UTAH 4 CVS Health Corporation 10598 4.0
+UTAH 5 Cambia Health Solutions, Inc. 7117 2.7
+VERMONT 1 Humana Inc. 7930 40.3
+VERMONT 2 Health Care Service Corporation 6335 32.2
+VERMONT 3 UnitedHealth Group, Inc. 3769 19.2
+VERMONT 4 CVS Health Corporation 1360 6.9
+VERMONT 5 Elevance Health, Inc. 256 1.3
+VIRGINIA 1 Humana Inc. 230608 34.2
+VIRGINIA 2 UnitedHealth Group, Inc. 187469 27.8
+VIRGINIA 3 Elevance Health, Inc. 135624 20.1
+VIRGINIA 4 CVS Health Corporation 69670 10.3
+VIRGINIA 5 Kaiser Foundation Health Plan, Inc. 33687 5.0
+WASHINGTON 1 UnitedHealth Group, Inc. 356694 45.7
+WASHINGTON 2 Humana Inc. 142933 18.3
+WASHINGTON 3 Kaiser Foundation Health Plan, Inc. 128659 16.5
+WASHINGTON 4 CVS Health Corporation 60444 7.7
+WASHINGTON 5 Centene Corporation 32996 4.2
+WEST VIRGINIA 1 Humana Inc. 117886 49.3
+WEST VIRGINIA 2 CVS Health Corporation 45598 19.1
+WEST VIRGINIA 3 UnitedHealth Group, Inc. 35118 14.7
+WEST VIRGINIA 4 Highmark Health 17531 7.3
+WEST VIRGINIA 5 West Virginia United Health System, Inc. 12238 5.1
+WISCONSIN 1 UnitedHealth Group, Inc. 275473 37.3
+WISCONSIN 2 Network Health, Inc. 132187 17.9
+WISCONSIN 3 Humana Inc. 118916 16.1
+WISCONSIN 4 Sanford Health 78997 10.7
+WISCONSIN 5 Elevance Health, Inc. 37255 5.0
+WYOMING 1 UnitedHealth Group, Inc. 8753 48.0
+WYOMING 2 Blue Cross Blue Shield of Michigan Mutual Ins. Co. 6520 35.7
+WYOMING 3 Humana Inc. 2067 11.3
+WYOMING 4 CVS Health Corporation 690 3.8
+WYOMING 5 Fenyx Health Holdings, Inc. 175 1.0
+state_name ma_members parent_orgs top5_share_pct largest_parent largest_share_pct
+---------- ---------- ----------- -------------- -------------- -----------------
+ALASKA 2000 5 100.0 CVS Health Corporation 51.0
+VERMONT 19663 6 99.9 Humana Inc. 40.3
+RHODE ISLAND 150277 7 99.9 Blue Cross & Blue Shield of Rhode Island 50.5
+WYOMING 18243 6 99.8 UnitedHealth Group, Inc. 48.0
+NORTH DAKOTA 31112 7 99.8 Medica Holding Company 36.3
+SOUTH DAKOTA 45853 8 99.6 Medica Holding Company 38.8
+MONTANA 77821 10 99.5 Humana Inc. 70.3
+NEW HAMPSHIRE 110323 9 99.5 Humana Inc. 38.6
+LOUISIANA 553703 12 98.8 Humana Inc. 41.7
+DISTRICT OF COLUMBIA 33636 9 98.5 UnitedHealth Group, Inc. 62.3
+VIRGINIA 674361 14 97.4 Humana Inc. 34.2
+NEW MEXICO 239080 13 97.4 UnitedHealth Group, Inc. 33.8
+UTAH 268264 14 96.8 UnitedHealth Group, Inc. 47.1
+KENTUCKY 540939 12 96.5 Humana Inc. 53.6
+OKLAHOMA 345304 12 96.1 UnitedHealth Group, Inc. 41.7
+COLORADO 557957 14 96.1 UnitedHealth Group, Inc. 44.7
+HAWAII 168609 13 96.1 UnitedHealth Group, Inc. 29.9
+MINNESOTA 598620 16 95.8 Aware Integrated, Inc. 49.2
+WEST VIRGINIA 238973 9 95.6 Humana Inc. 49.3
+KANSAS 196791 11 95.6 UnitedHealth Group, Inc. 39.3
+ARKANSAS 317734 13 95.4 UnitedHealth Group, Inc. 40.7
+CONNECTICUT 445344 13 94.9 CVS Health Corporation 43.2
+TENNESSEE 806862 15 94.4 UnitedHealth Group, Inc. 28.4
+MISSISSIPPI 290331 14 94.4 Humana Inc. 43.5
+IOWA 244864 15 93.9 CVS Health Corporation 32.6
+ILLINOIS 1078152 15 93.7 CVS Health Corporation 31.9
+DELAWARE 83735 12 93.5 UnitedHealth Group, Inc. 41.1
+NEW JERSEY 760895 15 93.5 CVS Health Corporation 30.6
+MISSOURI 737694 13 93.1 UnitedHealth Group, Inc. 44.9
+NEBRASKA 126190 13 92.9 UnitedHealth Group, Inc. 41.3
+NORTH CAROLINA 1331757 22 92.8 Humana Inc. 33.5
+INDIANA 716600 15 92.7 UnitedHealth Group, Inc. 35.3
+WASHINGTON 780858 17 92.4 UnitedHealth Group, Inc. 45.7
+MAINE 228921 11 90.7 Martin's Point Health Care, Inc. 28.9
+IDAHO 188342 15 90.7 UnitedHealth Group, Inc. 42.3
+SOUTH CAROLINA 595987 22 90.6 Humana Inc. 37.5
+TEXAS 2735120 27 90.2 UnitedHealth Group, Inc. 47.9
+FLORIDA 3049980 36 89.3 Humana Inc. 38.1
+MICHIGAN 1464676 19 89.0 Blue Cross Blue Shield of Michigan Mutual Ins. Co. 36.6
+GEORGIA 1120044 16 87.8 Humana Inc. 29.4
+ALABAMA 695994 14 87.5 Humana Inc. 33.2
+WISCONSIN 739071 19 87.0 UnitedHealth Group, Inc. 37.3
+MARYLAND 294173 13 86.0 Kaiser Foundation Health Plan, Inc. 25.7
+NEVADA 327025 20 85.1 UnitedHealth Group, Inc. 30.4
+ARIZONA 802893 27 83.8 UnitedHealth Group, Inc. 40.6
+MASSACHUSETTS 533013 19 81.9 Point32Health, Inc. 23.3
+OHIO 1476991 21 81.3 UnitedHealth Group, Inc. 23.1
+PENNSYLVANIA 1635578 22 78.0 CVS Health Corporation 27.2
+CALIFORNIA 3710031 41 77.0 Kaiser Foundation Health Plan, Inc. 41.1
+NEW YORK 2162046 25 76.8 CVS Health Corporation 18.6
+OREGON 518912 19 71.7 UnitedHealth Group, Inc. 30.1

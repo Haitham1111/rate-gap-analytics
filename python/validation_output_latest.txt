@@ -1,0 +1,20 @@
+PASS  county_rate 2024 rows                  source=3246  staged=3246
+PASS  county_rate 2024 sum of 0% rate        source=3610132.87  staged=3610132.87
+PASS  county_rate 2025 rows                  source=3247  staged=3247
+PASS  county_rate 2025 sum of 0% rate        source=3681231.72  staged=3681231.72
+PASS  county_rate 2026 rows                  source=3247  staged=3247
+PASS  county_rate 2026 sum of 0% rate        source=4004999.92  staged=4004999.92
+PASS  county_rate 2027 rows                  source=3247  staged=3247
+PASS  county_rate 2027 sum of 0% rate        source=4219978.76  staged=4219978.76
+PASS  enrollment 2024 raw rows               source=3708558  staged=3708558
+PASS  enrollment 2024 suppressed rows        source=3515908  staged=3515908
+PASS  enrollment 2024 enrollment sum         source=56900734  staged=56900734
+PASS  enrollment 2025 raw rows               source=3660916  staged=3660916
+PASS  enrollment 2025 suppressed rows        source=3474894  staged=3474894
+PASS  enrollment 2025 enrollment sum         source=58580469  staged=58580469
+PASS  enrollment 2026 raw rows               source=3398007  staged=3398007
+PASS  enrollment 2026 suppressed rows        source=3211863  staged=3211863
+PASS  enrollment 2026 enrollment sum         source=60950819  staged=60950819
+
+17 PASS / 0 FAIL of 17 checks
+OVERALL: PASS

@@ -60,6 +60,47 @@ The first build included Part D contracts. They were 41% to 55% of the enrollmen
 
 **Interpretation.** The year-over-year swings (a rise to 12.29% in 2020, a fall to 9.11% in 2021) coincide with the pandemic years. Linking them to utilization is an interpretation, not something this data shows. At national level, 2021 had both the lowest payment growth and the biggest drop in share; with five yearly points that co-movement is not tested. The no-relationship result (r = 0.02) is for counties only; contracts show at most a weak pattern.
 
+## Master extension: newest data, by state (added 2026-10-13)
+
+v1 above covers 2018 to 2023 and is unchanged. The master extension adds the newest CMS releases and a state view. Findings are in [`master-findings.md`](master-findings.md).
+
+### New sources and release dates
+
+| Source | File | Newest | Release date |
+|---|---|---|---|
+| MA county ratebooks | `2024-ma-rate-book.zip`, `2025-ma-rate-book.zip`, `2026-ma-rate-book.zip`, `2027-ma-rate-book.zip` | 2027 | Page shows no date; the final CY2027 rate announcement is dated 2026-04-06 |
+| Enrollment by contract/plan/state/county | `monthly-enrollment-cpsc-december-2024.zip`, `...-december-2025.zip`, `monthly-enrollment-cpsc-september-2026.zip` | September 2026 | Monthly; day not shown |
+| Contract type and parent organization | `CPSC_Contract_Info` inside the same enrollment zips | September 2026 | Same |
+| MLR | `public-use-file-cy-2023-zip.zip` (v1) | Contract year 2023 | Not stated by CMS |
+
+- **CY2027 rate announcement:** published 2026-04-06. CMS states a +2.48% expected average payment change (+4.98% with risk score trend). The state figures in this project are county rate file changes and are a different measure.
+- **MLR for contract year 2024:** no public use file was listed on 2026-10-13 and five file-name patterns returned not found. Non-medical share therefore stays at contract year 2023 while payment and enrollment run to 2026 and 2027. That gap in years is a limit of every state row.
+- Staging for the new files is in `C:\Users\Public\rate_gap\stage_v2\`; `python/04_validate_latest.py` recounts them (17 of 17 checks pass).
+
+### Definitions that differ from v1
+
+- **Scope for payment and enrollment** is Medicare Advantage plan types as CMS labels them (Local CCP, Regional CCP, PFFS, MSA) with contract prefix H, R or E. PACE and cost plans have an H prefix but are not paid from the county benchmark, so they are excluded here. v1 used the contracts that publish an MLR.
+- **State payment growth** is the enrollment-weighted average of county payment growth, weights = that year's MA enrollment (December for 2023-2025, September for 2026). **3-year growth** is the 2026 county rate against 2023, weighted by September 2026 enrollment. **2027 announced change** is the 2027 county rate against 2026, weighted by September 2026 enrollment.
+- **State non-medical share** is the v1 enrollment-weighted share by state for contract year 2023 (Dec 2023 weights).
+- **Ranks:** 1 = largest, each column ranked alone, nothing combined into one score. `top10_count` counts how many of enrollment, 3-year payment growth and 2027 announced change put a state in the top 10.
+
+### Projection method
+
+- **Payment, 2027 trend projection:** mean of the 2024, 2025 and 2026 growth rates carried forward, shown only beside the announced 2027 figure.
+- **Non-medical share:** mean of contract years 2021 to 2023, with the lowest-to-highest range of those years.
+- Projections are not published data, not forecasts of any plan, and not evidence of wrongdoing. Payment growth is not used to project non-medical share because no relationship was found (r = 0.02 by county, r = 0.032 by state).
+
+### Licensing caveat
+
+The licensed-state list was not supplied, so the scorecard covers all 50 states + DC and `dbo.dim_state_licence.licensed` is NULL until filled in. Nothing here says a state is available to any agent. Licensing, commission, competition and member needs are not in the data.
+
+### Added limits
+
+- The county rate column used is the 0% bonus column read as the base benchmark (assumption, as in v1).
+- Enrollment rows whose county code has no row in that year's ratebook are left out of payment growth. These are Connecticut codes 07120 and 07140 (December 2025 enrollment only; the ratebooks keep Connecticut's eight older county codes) and Arizona code 03101. That is 11 rows (1,177 members) in December 2024, 39 rows (3,468 members) in December 2025 and 1 row (25 members, under 0.001%) in September 2026, so the 3-year growth and the 2027 change leave out one county with 25 members. Checked by the QA pass on 2026-10-13.
+- Suppressed enrollment cells (10 or fewer) are dropped, as in v1.
+- Parent organization is the parent CMS lists on each contract for September 2026; it is not a statement about plan quality or behavior.
+
 ## Known and assumed
 
 | Known (computed or read from the files) | Assumed |

@@ -49,6 +49,16 @@ Source page: [Monthly Enrollment by Contract/Plan/State/County](https://www.cms.
 
 Columns: `Contract Number`, `Plan ID`, `SSA State County Code`, `FIPS State County Code`, `State`, `County`, `Enrollment` (`*` = 10 or fewer, suppressed). 2.3 to 3.7 million plan-county rows per month; about 95% are suppressed `*` cells.
 
+### 4. Newest releases (master extension, pulled 2026-10-13)
+
+| Data | File | Newest |
+|---|---|---|
+| County rates 2024 to 2027 | `2024-ma-rate-book.zip`, `2025-ma-rate-book.zip`, `2026-ma-rate-book.zip`, `2027-ma-rate-book.zip` (each has `CSV/CountyRate<year>.csv`) | 2027 |
+| Enrollment | `monthly-enrollment-cpsc-december-2024.zip`, `monthly-enrollment-cpsc-december-2025.zip`, `monthly-enrollment-cpsc-september-2026.zip` | September 2026 |
+| Contract type, parent organization | `CPSC_Contract_Info_*.csv` inside the enrollment zips (December 2023, 2024, 2025, September 2026) | September 2026 |
+
+MLR is unchanged: contract year 2023 is still the newest public file. Staged by `python/03_pull_cms_latest.py` into `C:\Users\Public\rate_gap\stage_v2\` (12,987 rate rows, 225,610 contract x county enrollment rows, 4,034 contract rows); `python/04_validate_latest.py` recounts them. The `stage_v2` CSVs are not committed (the enrollment file is 6.7 MB and is re-created by the script).
+
 ## Staged files (`stage/`)
 
 | File | Rows | Columns |
